@@ -49,6 +49,7 @@ app.post("/",function(req,res){
         else
         {
             res.sendFile(__dirname+"/failure.html");
+            console.log(response.statusCode);
         }
         response.on("data",function(data){  //when we receive a response from the server which contains "data",we console log it.
             console.log(JSON.parse(data));
